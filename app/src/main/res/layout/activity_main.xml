@@ -27,7 +27,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/app_title"
-        android:hint="@string/insert_text"/>
+        android:hint="@string/insert_text"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/btn_show_text"
