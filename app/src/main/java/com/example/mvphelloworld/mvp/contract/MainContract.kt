@@ -2,10 +2,11 @@ package com.example.mvphelloworld.mvp.contract
 
 interface MainContract {
     interface Presenter {
-        fun onButtonPressed()
+        fun onButtonPressed(text: String)
     }
     interface View {
-        fun showText()
+        fun showText(text: String)
+        fun onButtonPressed(onClick: () -> Unit)
         fun getText(): String
     }
 }

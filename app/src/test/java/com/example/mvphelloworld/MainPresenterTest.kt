@@ -24,7 +24,7 @@ class MainPresenterTest {
     @Test
     fun aToastShouldBeDisplayed() {
         every { mainView.getText() } returns "Hello"
-        mainPresenter.onButtonPressed()
-        verify { mainView.showText() }
+        mainPresenter.onButtonPressed("Hello")
+        verify { mainView.showText("Hello") }
     }
 }

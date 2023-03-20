@@ -14,8 +14,12 @@ class MainView(activity: Activity) : ActivityView(activity), MainContract.View {
         activity.setContentView(binding.root)
     }
 
-    override fun showText() {
-        binding.btnShowText.setOnClickListener { Toast.makeText(activity, getText(), Toast.LENGTH_SHORT).show() }
+    override fun showText(text: String) {
+        Toast.makeText(activity, text, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onButtonPressed(onClick: () -> Unit) {
+        binding.btnShowText.setOnClickListener { onClick() }
     }
 
     override fun getText(): String {

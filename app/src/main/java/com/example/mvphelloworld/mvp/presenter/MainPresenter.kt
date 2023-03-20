@@ -5,10 +5,9 @@ import com.example.mvphelloworld.mvp.contract.MainContract
 class MainPresenter(private val view: MainContract.View) : MainContract.Presenter {
 
     init {
-        onButtonPressed()
+        view.onButtonPressed { onButtonPressed(view.getText()) }
     }
-
-    override fun onButtonPressed() {
-        view.showText()
+    override fun onButtonPressed(text: String) {
+        view.showText(text)
     }
 }
